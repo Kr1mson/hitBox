@@ -25,9 +25,9 @@ def recommend_games():
 
     distances, indices = loaded_index.search(query_embedding, top_n)
 
-    recommendations = df.iloc[indices[0]]['id'].tolist()
-    names = df.iloc[indices[0]]['name'].tolist()
-    return jsonify({"recommendations": recommendations,"names":names})
+    recommendations = df.iloc[indices[0]]["name"].tolist()
+    
+    return jsonify({"recommendations": recommendations})
 
 if __name__ == '__main__':
     app.run(debug=True)

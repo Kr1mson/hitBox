@@ -17,7 +17,9 @@ def recommend_games(user_query, top_n=5):
     recommendations = df.iloc[indices[0]]["name"].tolist()
 
     return recommendations
-user_input = "dante"
+
+user_input = "kung fu styled fighting game"
 recommended_games = recommend_games(user_input, top_n=5)
 
 print("Recommended Games:", recommended_games)
+
