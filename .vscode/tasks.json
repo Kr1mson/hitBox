@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "install-flask-cors",
+      "command": "pip",
+      "args": ["install", "flask-cors"],
+      "presentation": {
+        "reveal": "silent"
+      }
+    }
+  ]
+}

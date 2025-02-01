@@ -1,34 +1,39 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import logo from './assets/logo.png'
+import Search from './components/Search/Search'
+import Suggest from './components/Suggest/Suggest'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='container'>
+      <div className="overlay"></div> 
+      <div className="header">
+        <img src={logo} alt="hitbox logo" />
+        <p>Hitbox</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='body-text'>
+        <p>Hello there,</p>
+        <h3>What would you like to play today</h3>
+        <Search />
+        <div className='suggestions'>
+          <Suggest text="Action games released after 2010"/>
+          <Suggest text="Action games released after 2010"/>
+          <Suggest text="Action games released after 2010"/>
+          <Suggest text="Action games released after 2010"/>
+          <Suggest text="Action games released after 2010"/>
+          <Suggest text="Action games released after 2010"/>
+
+          
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div className='search-container'>
+        
+        
+      </div>
+    </div>
   )
 }
 

@@ -1,42 +1,85 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+  position: relative;
+  background-image: url('assets/day_bg.jpg');
+  background-size: cover;
+  background-position: center; 
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  font-size: 20px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0; 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header {
+  position: absolute; 
+  top:-20px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 2; 
+  padding: 0;
+  margin: 0;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.header p{
+  font-size: 48px;
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: normal;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header img{
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body-text{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  padding:0;
+  
+  white-space: nowrap;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.body-text p{
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:24px;
+  margin:0;
+  padding:0;
 }
-
-.card {
-  padding: 2em;
+.body-text h3{
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:45px;
+  margin:0;
+  padding:0;
+  background: linear-gradient(to right, #03DAC5, #9B0070);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
 }
-
-.read-the-docs {
-  color: #888;
+.search-container{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.suggestions{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
 }
