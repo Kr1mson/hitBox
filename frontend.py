@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 st.set_page_config(page_title="Hitbox", page_icon="🤖")
 st.title("hitbox")
-
+st.subheader('Game recommendation system using \'sentence-transformers/all-MiniLM-L6-v2\' and FAISS for quick semantic search')
 
 user_input = st.chat_input("Describe your favourite game, genre or playstyle...", key="chat_input")
 if user_input:
